@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>本との出会い診断</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#fffbeb;color:#334155;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif}
+.wrap{max-width:520px;margin:auto;padding:18px}
+.card{background:#fff;border:2px solid #fde68a;border-radius:26px;padding:24px;box-shadow:0 8px 28px #00000012}
+h1,h2{color:#451a03}h1{font-size:27px;margin:10px 0}h2{font-size:21px;line-height:1.5}
+p{line-height:1.7}.sub{font-size:14px;color:#64748b}
+.badge{display:inline-block;background:#fef3c7;color:#92400e;border-radius:99px;padding:6px 12px;font-size:12px;font-weight:700}
+.page{display:none}.start{display:block}
+#q1:target,#q2:target,#q3:target,#q4:target,#result:target{display:block}
+body:has(#q1:target) .start,body:has(#q2:target) .start,body:has(#q3:target) .start,body:has(#q4:target) .start,body:has(#result:target) .start{display:none}
+body:has(#q2:target) #q1,body:has(#q3:target) #q1,body:has(#q4:target) #q1,body:has(#result:target) #q1{display:none}
+body:has(#q3:target) #q2,body:has(#q4:target) #q2,body:has(#result:target) #q2{display:none}
+body:has(#q4:target) #q3,body:has(#result:target) #q3{display:none}
+body:has(#result:target) #q4{display:none}
+.startbtn,.next,.back{display:block;text-decoration:none;text-align:center;border-radius:16px;padding:15px;font-weight:800;margin-top:18px}
+.startbtn,.next{background:#f59e0b;color:#fff}.back{background:#f1f5f9;color:#475569}
+.progress{font-size:12px;font-weight:800;color:#92400e;margin-bottom:20px}
+.option{display:block;border:2px solid #fde68a;border-radius:16px;padding:15px;margin:11px 0;cursor:pointer;line-height:1.6}
+.option input{margin-right:8px;accent-color:#f59e0b}
+.option:has(input:checked){background:#fffbeb;border-color:#f59e0b}
+.notice{background:#fff7ed;border-radius:16px;padding:14px;font-size:13px;margin-top:18px}
+.result{display:none}
+body:has(#result:target) #defaultResult{display:block}
+@media (min-width:700px){.wrap{padding-top:50px}}
+</style>
+</head>
+<body>
+<div class="wrap"><div class="card">
+
+<section class="page start" id="start">
+<div class="badge">4問でわかる</div>
+<h1>📚 本との出会い診断</h1>
+<p class="sub">「本を読まなきゃ」ではなく、あなたがちょっと気になる本を見つけるための4問診断。</p>
+<a class="startbtn" href="#q1">診断をはじめる →</a>
+<div class="notice">💡 診断は約1分。友達と結果を見せ合うのもおすすめ！</div>
+</section>
+
+<section class="page" id="q1">
+<div class="progress">QUESTION 1 / 4</div>
+<h2>本に求める「世界観」は？</h2>
+<label class="option"><input type="radio" name="q1" checked> 非日常・ワクワクする世界</label>
+<label class="option"><input type="radio" name="q1"> 身近で共感できる世界</label>
+<a class="next" href="#q2">次の質問へ →</a>
+</section>
+
+<section class="page" id="q2">
+<div class="progress">QUESTION 2 / 4</div>
+<h2>どんな展開に惹かれる？</h2>
+<label class="option"><input type="radio" name="q2" checked> 伏線回収・謎解き・スピード感</label>
+<label class="option"><input type="radio" name="q2"> 感情描写・美しい文章・余韻</label>
+<a class="next" href="#q3">次の質問へ →</a>
+</section>
+
+<section class="page" id="q3">
+<div class="progress">QUESTION 3 / 4</div>
+<h2>本を読みたいのはどんなとき？</h2>
+<label class="option"><input type="radio" name="q3" checked> 気分転換・刺激がほしいとき</label>
+<label class="option"><input type="radio" name="q3"> 一人でじっくり考えたいとき</label>
+<a class="next" href="#q4">次の質問へ →</a>
+</section>
+
+<section class="page" id="q4">
+<div class="progress">QUESTION 4 / 4</div>
+<h2>読み終わった後、どんな気持ちになりたい？</h2>
+<label class="option"><input type="radio" name="q4" checked> 「面白かった！」とスッキリしたい</label>
+<label class="option"><input type="radio" name="q4"> 「考えさせられた」と余韻に浸りたい</label>
+<a class="next" href="#result">結果を見る 🎉</a>
+</section>
+
+<section class="page" id="result">
+<div class="badge">YOUR BOOK TYPE</div>
+<h1>🎢 ジェットコースター冒険家</h1>
+<h2>スリル & カタルシス重視</h2>
+<p class="sub">圧倒的な非日常世界と、怒涛の展開を楽しみたいタイプ。ページをめくる手が止まらなくなるような作品と相性◎。</p>
+<hr style="border:0;border-top:1px solid #fef3c7;margin:22px 0">
+<div class="badge">おすすめの一冊</div>
+<h2>『プロジェクト・ヘイル・メアリー』</h2>
+<p class="sub">アンディ・ウィア</p>
+<p>極限状態の宇宙で命がけのミッションに挑むSFエンタメ作品。まずは1ページだけでも覗いてみて。</p>
+<div class="notice">📖 気になったら、まちライブラリーで実際に探してみよう！</div>
+<a class="back" href="#start">もう一度診断する</a>
+</section>
+
+</div></div>
+</body>
+</html>
